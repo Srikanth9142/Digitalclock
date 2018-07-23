@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Now time is:</p>
+
+<p id="demo"></p>
+<br>
+<button onclick="StopFunction()">Stop it!</button>
+<image src="http://www.dirty30.co/wp-content/uploads/2017/08/Hello-Online-Alarm-Clock.jpg">
+<script>
+var myVar = setInterval(Timer, 1000);
+
+function Timer() {
+    var x= new Date();
+    var push = x.toLocaleTimeString();
+    document.getElementById("demo").innerHTML=push;
+    document.body.style.backgroundColor = "lightgrey";
+}
+
+function StopFunction() {
+    clearInterval(myVar);
+}
+</script>
+
+</body>
+</html>
